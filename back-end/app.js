@@ -19,6 +19,12 @@ app.get('/', (req, res) => {
     res.send("WELCOMEEE");
 });
 
+// 404 Route Handler
+app.use((req, res, next) => {
+  res.status(404).send('Sorry, the page you are looking for does not exist.');
+});
+
+
 
 
  module.exports = app;
