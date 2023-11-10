@@ -9,14 +9,16 @@ const cors = require('cors')
 
 
 // Middleware
-// app.use(cors());
-// app.use(express.json());
+app.use(cors());
+app.use(express.json());
 // When the URL starts w /songs, use the songController to route us appropriately
-// app.use("/songs", songController);
+app.use("/songs", songController);
 
 
-app.get('/songs', (req, res) => {
-    res.send("Here's all the music");
+app.get('/', (req, res) => {
+    res.send("WELCOMEEE");
 });
+
+
 
  module.exports = app;
