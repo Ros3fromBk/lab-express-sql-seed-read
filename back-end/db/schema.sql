@@ -1,6 +1,12 @@
+CREATE DATABASE songs_dev;
 
+\c songs_dev
+
+DROP TABLE songs ;
 CREATE TABLE songs
-(name TEXT NOT NULL,
+(
+     id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
  artist TEXT NOT NULL,
- album TEXT, time TEXT,
+ album TEXT, 
  is_favorite BOOLEAN);
